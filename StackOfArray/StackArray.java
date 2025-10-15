@@ -14,8 +14,17 @@ public class StackArray {
     }
     void print(){
         for(int i = top; i >= 0; i--){
-            System.out.println(stack[i]);
+            System.out.print(stack[i] + " ");
         }
+        System.out.println();
+    }
+    void peek(){
+        System.out.println("Peek : " + stack[top]);
+    }
+    void pop(){
+        stack[top] = 0;
+        top -= 1;
+        System.out.println("Top value is removed !!");
     }
 
 
