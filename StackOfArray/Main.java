@@ -12,7 +12,8 @@ public class Main {
             System.out.println("2. Pop");
             System.out.println("3. Peek");
             System.out.println("4. Display");
-            System.out.println("5. Exit");
+            System.out.println("5. Separate Even");
+            System.out.println("6. Exit");
             int ch = sc.nextInt();
             switch (ch){
                 case 1:
@@ -30,7 +31,15 @@ public class Main {
                     s.print();
                     break;
                 case 5:
+                    StackArray evenStack = new StackArray(s.top);
+                    StackArray ans = s.separateEven(evenStack);
+                    ans.print();
+                    break;
+                case 6:
                     System.exit(0);
+                    break;
+                case 7:
+                    s.reverseString("Maaz Abbas");
                     break;
                 default:
                     System.out.println("Wrong");
